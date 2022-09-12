@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if(amount != 0){
             // Adding the data into an object then unshifting the object into an array
-            expenses.unshift({name: `${name}`, amount: Number(`${lookLikeCurrency(numberToPrecision(amount))}`), date: `${date}`})
+            expenses.unshift({name: `${name}`, amount: `${lookLikeCurrency(numberToPrecision(+amount))}`, date: `${date}`})
         
             // Creating a new row
             let newTableRow = document.createElement('tr')
