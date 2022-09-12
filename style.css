@@ -1,43 +1,38 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #container {
-    width: 80%;
-    margin: auto;
-    /* background-color: grey; */
+  width: 80%;
+  margin: auto;
 }
 
-div>h2,
-div h3{
-    text-align: center;
+div > h2,
+div h3 {
+  text-align: center;
 }
 
-#inputfield{
-    height: 40vh;
-    padding: 0 30px;
+#inputfield {
+  height: 40vh;
+  padding: 0 30px;
 }
 
-#inputfield>label{
-    font-size: 20px;
-    padding: 30px 5px;
-    line-height: 7vh;
-    margin: 40px 5px;
-    /* padding-top: 20px;
-    padding-bottom: 20px; */
+#inputfield > label {
+  font-size: 20px;
+  padding: 30px 5px;
+  line-height: 7vh;
+  margin: 40px 5px;
 }
 
-#inputfield:first-child{
-    width: 20%;
-    /* background-color: white; */
+#inputfield:first-child {
+  width: 20%;
 }
 
-#inputfield>label>input{
-    border: none;
+#inputfield > label > input {
+  border: none;
 }
 
-#inputfield>label>input[type="text"]{
-    width: 80%;
+#inputfield > label > input[type="text"] {
+  width: 80%;
 }
-
