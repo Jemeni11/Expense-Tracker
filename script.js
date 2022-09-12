@@ -4,6 +4,17 @@ let total
 let listOfAmounts
 let amountValue
 
+
+function numberToPrecision(number) {
+  const numberLength = number.toString().split(".")[0].length + 2;
+  return +number.toPrecision(numberLength);
+}
+
+function lookLikeCurrency(number) {
+  return number.toLocaleString("en-US", { minimumFractionDigits: 2 });
+}
+
+
 document.addEventListener('DOMContentLoaded', function(){
     let addExpenseButton = document.getElementById('addExpense')
 
@@ -17,9 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         if(amount != 0){
             // Adding the data into an object then unshifting the object into an array
-            expenses.unshift({name: `${name}`, amount: Number(`${amount}`), date: `${date}`})
-            console.log(expenses)
-            console.log(e)
+            expenses.unshift({name: `${name}`, amount: Number(`${lookLikeCurrency(numberToPrecision(amount))}`), date: `${date}`})
         
             // Creating a new row
             let newTableRow = document.createElement('tr')
